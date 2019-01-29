@@ -27,7 +27,7 @@ def main():
     # Un-comment out these tests as you implement the methods they test.
     run_test_beep_and_tone()
     # run_test_go_straight_for_seconds()
-    run_test_go_straight_for_inches_using_time()
+    #run_test_go_straight_for_inches_using_time()
     run_test_go_straight_for_inches_using_sensor()
     # run_test_raise_arm()
     # run_test_lower_arm()
@@ -61,9 +61,9 @@ def run_test_beep_and_tone():
         b = Beeper()
         b.beep().wait()
 
-    for k in range(10):
-        t = ToneMaker()
-        t.tone(900).wait()
+    #for k in range(10):
+        #t = ToneMaker()
+        #t.tone(900).wait()
 
 
 
@@ -364,7 +364,6 @@ class DriveSystem(object):
         self.go_straight_for_seconds(seconds, speed)
 
     def go_straight_for_inches_using_sensor(self, inches, speed):
-        pass
         self.right_motor.reset_position()
         self.go(speed,speed)
         while True:
